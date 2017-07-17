@@ -47,6 +47,8 @@ def process_file(filename):
                 print("Το password δεν έχει αλλάξει")
             else:
                 v.seek(8)
+                v.write(" "*len(current_pass))
+                v.seek(8)
                 v.write(password)
                 print("Το password άλλαξε από",current_pass,"σε", password)
            
