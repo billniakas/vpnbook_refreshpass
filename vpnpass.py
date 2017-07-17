@@ -47,7 +47,7 @@ def process_file(filename):
                 print("Το password δεν έχει αλλάξει")
             else:
                 v.seek(8)
-                v.write(" "*len(current_pass))
+                v.write("\n"*len(current_pass))
                 v.seek(8)
                 v.write(password)
                 print("Το password άλλαξε από",current_pass,"σε", password)
@@ -55,3 +55,5 @@ def process_file(filename):
 
 url = "https://www.vpnbook.com/freevpn"
 vpn_page(url)
+
+os.remove("vpnpass.html")
